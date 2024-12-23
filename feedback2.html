@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+    <style>
+        body {
+            background: url('nature4.jpg');
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 50px; /* Adjust this to account for navbar height */
+        }
+
+        /* Navigation Bar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            position: fixed; /* Make the navbar fixed at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the navbar stays on top */
+        }
+
+        li {
+            margin: 0 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            font-family: ALGERIAN, sans-serif;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        li a:hover {
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        /* Content Styling */
+        .content {
+            margin-top: 100px;
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Feedback Form Styling */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .id {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .id input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #181717;
+            color: white;
+        }
+
+        .id i {
+            position: absolute;
+            font-size: 20px;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(15, 74, 191);
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Button Hover */
+        button:hover {
+            background-color: rgb(15, 74, 191);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="mitigation.html">Mitigation</a></li>
+        <li><a href="Adaptation.html">Adaptation</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="feedback2.html">Feedback</a></li>
+    </ul>
+
+    <!-- Feedback Form -->
+    <div class="container">
+        <form>
+            <h1>Feedback</h1>
+            <div class="id">
+                <input type="text" placeholder="Full Name" required>
+                <i class="far fa-user"></i>
+            </div>
+            <div class="id">
+                <input type="email" placeholder="Email Address" required>
+                <i class="far fa-envelope"></i>
+            </div>
+            <textarea placeholder="Enter your opinion here..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

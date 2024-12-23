@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>Adaptation</title>
+        <style>
+                body{
+            background: url('animal.jpg');
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+          }
+          h1 {  
+           color: lightblue;  
+           font-size: 87px;  
+           text-align: center;  
+           font-family: Cooper Black;  
+          }  
+
+          h2 {  
+           color: white;  
+           font-size: 46px;  
+           text-align: left;  
+           font-family: Cooper Black;  
+          }  
+
+          p {  
+           color:red;  
+           font-size: 20px;  
+           text-align: left;  
+           font-family: Comic Sans MS;  
+          }  
+
+
+
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: ALGERIAN;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: black;
+}
+
+h1 {        position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 60px;
+            margin: 0;            
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);            
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out forwards;
+                }
+
+#content h2{
+  margin-top:100px;
+}
+
+#content h2 {
+    max-width: 1200px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.3); /* Add a background for better contrast */
+    text-align: center;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+}
+
+
+            #content{/*for the products to display from left to 
+            right if not it will display one straightline from top to bottom*/
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            }
+
+            .text1, .text2, .text3, .text4 {
+            display: flex; /* Enable flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 28%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            position: relative;
+            color: white;
+        }
+
+        .text1 a,.text2 a,.text3 a,.text4 a{
+          text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Comic Sans MS;
+            text-align: center;
+        }
+
+        </style>
+</head>
+
+<body>
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="mitigation.html">Mitigation</a></li>
+    <li><a href="Adaptation.html">Adaptation</a></li>
+    <li><a href="policy.html">Policy</a></li>
+    <li><a href = "education.html">Education</a></li>
+    <li><a href="feedback2.html">feedback</a></li>
+  </ul>
+
+  <div id = "content">
+    <h1>Climate Change Adaptation</h1>
+    <h2>Strategies to cope with the impacts of climate change.</h2>
+    <div class = "text1">
+      <a href="disaster risk.html">(i) Disaster Risk Reduction</a>
+      </div>
+      <div class = "text2">  
+        <a href="water management.html">(ii) Water Management</a>
+      </div>
+    <div class = "text3">
+      <a href="coastal zone management.html">(iii) Coastal Zone Management</a>
+    </div>
+    <div class = "text4"> 
+      <a href="agriculture and food security.html">(iv) Agriculture and Food Security</a>
+    </div>
+    </div>
+
+</body>
+</html>
