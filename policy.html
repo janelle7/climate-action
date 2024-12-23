@@ -1,15 +1,86 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Policy</title>
-        <style>
-              body{
+<head>
+    <title>Policy</title>
+    <style>
+         body {
             background: url('nature2.jpg');
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
-          }
-          h1 {  
+            font-family: Arial, sans-serif;
+            padding-top: 50px; /* Adjust this to account for navbar height */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            position: fixed; /* Make the navbar fixed at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the navbar stays on top */
+        }
+
+        li {
+            margin: 0 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            font-family: ALGERIAN, sans-serif;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        li a:hover {
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        /* Content Styling */
+        .content {
+            margin-top: 100px;
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Feedback Form Styling */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
+        h1 {  
            color: lightblue;  
            font-size: 87px;  
            text-align: center;  
@@ -18,61 +89,33 @@
 
           h2 {  
            color: white;  
-           font-size: 56px;  
+           font-size: 46px;  
            text-align: left;  
            font-family: Cooper Black;  
           }  
 
           p {  
-           color: whitesmoke;  
+           color:red;  
            font-size: 20px;  
            text-align: left;  
            font-family: Comic Sans MS;  
           }  
 
-
-
-        ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  font-family: ALGERIAN;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: white;
-}
-
-h1 {            position: absolute;
-            top: 20%;            
+          h1 {        position: absolute;
+            top: 20%;
             left: 50%;
-            transform: translate(-50%, -50%);            
-            color: black;
-            text-align: center;            
-            font-size: 72px;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 60px;
             margin: 0;            
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);            
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
-
-#content h2{
+            animation: slideIn 1.5s ease-in-out forwards;
+                }
+            
+                #content h2{
   margin-top:100px;
 }
 
@@ -123,33 +166,33 @@ h1 {            position: absolute;
             text-align: center;
         }
 
-        </style>
-</head>
 
+    </style>
 <body>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="mitigation.html">Mitigation</a></li>
-    <li><a href="Adaptation.html">Adaptation</a></li>
-    <li><a href="policy.html">Policy</a></li>
-    <li><a href = "education.html">Education</a></li>
-    <li><a href="feedback2.html">feedback</a></li>
-  </ul>
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mitigation.html">Mitigation</a></li>
+        <li><a href="Adaptation.html">Adaptation</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="feedback2.html">Feedback</a></li>
+    </ul>
 
-  <div id = "content">
-    <h1>Climate Policy and Governance</h1>
-    <h2>Policies and regulations to address climate change.</h2>
-    <div class = "text1">
-      <a href="international climate agreements.html">(i) International Climate Agreements</a>
-      </div>
-      <div class = "text2">
-      <a href="national climate polices.html">(ii) National Climate Policies</a>
-      </div>
-      <div class = "text3">
-      <a href="Local Climate Action Plans.html">(iii) Local Climate Action Plans</a>
-      </div>
-  
-</div>
-
+    <div id = "content">
+        <h1>Climate Policy and Governance</h1>
+        <h2>Policies and regulations to address climate change.</h2>
+        <div class = "text1">
+          <a href="international climate agreements.html">(i) International Climate Agreements</a>
+          </div>
+          <div class = "text2">
+          <a href="national climate polices.html">(ii) National Climate Policies</a>
+          </div>
+          <div class = "text3">
+          <a href="Local Climate Action Plans.html">(iii) Local Climate Action Plans</a>
+          </div>
+      
+    </div>
 </body>
+</head>
 </html>
