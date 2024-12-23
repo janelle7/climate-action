@@ -1,16 +1,86 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Home</title>
-        <style>
-
-          body{
+<head>
+    <title>Home</title>
+    <style>
+         body {
             background: url('nature.jpg');
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
-          }
-          h1 {  
+            font-family: Arial, sans-serif;
+            padding-top: 50px; /* Adjust this to account for navbar height */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            position: fixed; /* Make the navbar fixed at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure the navbar stays on top */
+        }
+
+        li {
+            margin: 0 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            font-family: ALGERIAN, sans-serif;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        li a:hover {
+            background-color: grey;
+            border-radius: 5px;
+        }
+
+        /* Content Styling */
+        .content {
+            margin-top: 100px;
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Feedback Form Styling */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
+        h1 {  
            color: lightblue;  
            font-size: 87px;  
            text-align: center;  
@@ -38,36 +108,8 @@
            text-align: left;  
            font-family: Comic Sans MS;  
           }  
-
-
-
-        ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: black;
-  font-size: 20px;
-  text-align: center;
-  font-family: ALGERIAN;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: white;
-}
-
-h1 {        
+        
+          h1 {        
             position: absolute;
             top: 20%;            
             left: 50%;
@@ -82,38 +124,26 @@ h1 {
             animation: slideIn 1.5s ease-in-out forwards;        
           }
 
-.content{
-  margin-top:100px;
-}
-
-.content{
-                max-width: 1200px;
-                margin: 100px auto 20px;
-                padding: 20px;
-                color: black;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-</style>
-</head>
-
+    </style>
 <body>
-  <ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="mitigation.html">Mitigation</a></li>    
-    <li><a href="Adaptation.html">Adaptation</a></li>
-    <li><a href="policy.html">Policy</a></li>
-    <li><a href = "education.html">Education</a></li>
-    <li><a href="feedback2.html">Feedback</a></li>
-  </ul>
+    <!-- Navigation Bar -->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mitigation.html">Mitigation</a></li>
+        <li><a href="Adaptation.html">Adaptation</a></li>
+        <li><a href="policy.html">Policy</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="feedback2.html">Feedback</a></li>
+    </ul>
 
-  <div class = "content">
-    <h1>CLIMATE ACTION</h1>
-    <br>
-    <h2>Introduction to Climate Action</h2>
-    <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
-    <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
-  </div>
+    <div class = "content">
+        <h1>CLIMATE ACTION</h1>
+        <br>
+        <h2>Introduction to Climate Action</h2>
+        <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
+        <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
+    </div>
 
 </body>
+</head>
 </html>
