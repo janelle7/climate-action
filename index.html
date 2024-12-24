@@ -177,52 +177,96 @@
             background-color: #2eb444;
         }
 
-        /* Media Queries for responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .climate-button {
-                width: 100%;
-                padding: 18px;
-                font-size: 16px;
-            }
+       /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            justify-content: space-between;
+            width: 25px;
+            height: 20px;
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 30px;
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .mobile-menu li {
+            margin: 10px 0;
+        }
+
+        /* Media Query for mobile devices */
+        @media screen and (max-width: 768px) {
+            ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
             }
 
-            h2 {
-                font-size: 22px;
+            .hamburger {
+                display: flex;
             }
 
-            .climate-button {
-                font-size: 14px;
-                padding: 15px;
+            .mobile-menu {
+                display: flex;
+            }
+
+            ul.show {
+                display: flex;
+            }
+
+            .mobile-menu a {
+                font-size: 20px;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                text-decoration: none;
+            }
+
+            .mobile-menu a:hover {
+                background-color: #444;
             }
         }
     </style>
 <body>
     <!-- Navigation Bar -->
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mitigation.html">Mitigation</a></li>
-        <li><a href="Adaptation.html">Adaptation</a></li>
-        <li><a href="policy.html">Policy</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="feedback2.html">Feedback</a></li>
-    </ul>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mitigation.html">Mitigation</a></li>
+            <li><a href="adaptation.html">Adaptation</a></li>
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="feedback2.html">Feedback</a></li>
+        </ul>
+
+        <ul id="mobileMenu" class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mitigation.html">Mitigation</a></li>
+            <li><a href="adaptation.html">Adaptation</a></li>
+            <li><a href="policy.html">Policy</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="feedback2.html">Feedback</a></li>
+        </ul>
+    </nav>
 
     <main>
     <div class = "content">
@@ -241,6 +285,18 @@
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn">↑ Back to Top</button>
 
+    <script>
+        // Function to toggle the mobile menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const mobileMenu = document.getElementById("mobileMenu");
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+            } else {
+                menu.classList.add("show");
+            }
+        }
+    </script>
 <script>
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector("ul");
