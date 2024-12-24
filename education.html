@@ -85,93 +85,79 @@
            font-size: 87px;  
            text-align: center;  
            font-family: Cooper Black;  
+           position: absolute; 
+          top: 20%; 
+          left: 50%; 
+          transform: translate(-50%, -50%); 
+          background-color: rgba(0, 0, 0, 0.5); 
+          padding: 20px; 
+          border-radius: 10px; 
+          animation: slideIn 1.5s ease-in-out forwards; 
           }  
 
           h2 {  
-           color: white;  
-           font-size: 46px;  
+           color: red;  
+           font-size: 56px;  
            text-align: left;  
            font-family: Cooper Black;  
           }  
 
           p {  
-           color:red;  
+           color: white;  
            font-size: 20px;  
            text-align: left;  
            font-family: Comic Sans MS;  
           }  
-
-          h1 {        position: absolute;
-            top: 20%;
+        
+          h1 {        
+            position: absolute;
+            top: 20%;            
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);            
             color: white;
-            text-align: center;
-            font-size: 60px;
+            text-align: center;            
+            font-size: 72px;
             margin: 0;            
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);            
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;
-                }
-            
-                #content h2{
-  margin-top:100px;
-}
+            animation: slideIn 1.5s ease-in-out forwards;        
+          }
 
-#content h2{
-  margin-top:100px;
-}
-
-#content h2{
-                max-width: 1200px;
-                margin: 100px auto 20px;
-                padding: 20px;
-                color: red;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                background-color: rgba(0, 0, 0, 0.3); /* Add a background for better contrast */
-                text-align: center;
-                border-radius: 10px; /* Optional: rounded corners */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
-
-              }
-
-              #content{/*for the products to display from left to 
-            right if not it will display one straightline from top to bottom*/
-            display: flex;
-            justify-content: space-between;
-            padding-top: 30px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-            }
-
-            .text1, .text2, .text3 {
-            display: flex; /* Enable flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            width: 28%;
-            min-width: 250px;
-            padding: 10px 12px;
-            border: 1px solid ;
-            border-radius: 25px;
+                      /* Back to Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-            margin: 15px 0;
-            transition: 0.2s ease;
-            position: relative;
-            color: black;
+            font-size: 16px;
         }
 
-        .text1 a,.text2 a,.text3 a{
-            text-decoration: none;
-            color: white
-            ;
-            font-size: 20px;
-            font-family: Comic Sans MS;
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
             text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
         }
-
-
     </style>
 <body>
     <!-- Navigation Bar -->
@@ -184,19 +170,71 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <div id = "content">
+    <main>
+    <div class = "content">
         <h1>Climate Education and Awareness</h1>
-        <h2>Raising awareness about climate change and its impacts.</h2>
-        <div class = "text1">
-          <a href="Climate Literacy Programs.html">(i) Climate Literacy Programs</a>
-          </div>
-          <div class = "text2">
-          <a href="Public Engagement Campaigns.html">(ii) Public Engagement Campaigns</a>
-          </div>
-          <div class = "text3">
-          <a href="Media and Communication Strategies.html">(iii) Media and Communication Strategies</a>
-          </div>
+        <br>
+        <h2>Introduction to Climate Education and Awareness</h2>
+        <p>Climate education and awareness involve teaching individuals, communities, and organizations about the causes, impacts, and solutions to climate change. It aims to equip people with the knowledge and skills needed to understand environmental issues, make informed decisions, and take action to mitigate climate change. Climate education spans various levels, from schools and universities to public outreach campaigns. It helps raise awareness of sustainable practices, such as reducing carbon footprints, conserving resources, and supporting policies that protect the environment. By fostering climate literacy, it encourages collective action and empowers individuals to contribute to climate solutions.
+        </p>
+        <h2>(i) Climate Literacy Programs</h2>
+        <p>Climate literacy programs aim to educate individuals about the science of climate change, its effects, and the importance of taking action to address it. These programs focus on increasing understanding of climate-related issues, such as global warming, carbon emissions, and sustainability. Climate literacy equips people with the knowledge to make informed decisions about their environmental impact and supports the development of climate-friendly behaviors. These programs are typically integrated into schools, communities, and workplaces to foster a more climate-conscious society.
+        </p>
+        <p>Exmaple:</p>
+        <p>The Climate Reality Project</p>
+        <h2>(ii) Public Engagement Campaigns</h2>
+        <p>Public engagement campaigns aim to raise awareness and mobilize individuals, communities, and organizations to take action on climate change. These campaigns use various communication channels, such as media, social networks, and community events, to inform the public about climate issues, promote sustainable practices, and advocate for policy change. By engaging diverse audiences, these campaigns seek to foster widespread understanding of climate challenges and inspire collective action to reduce emissions, conserve resources, and adapt to climate impacts. Public engagement campaigns are essential for building a climate-conscious society and driving global climate action.
+        </p>
+        <p>Exmaple:</p>
+        <p>The "This is Not a Drill" Campaign by the UN</p>
+        <h2>(iii) Media and Communication Strategies</h2>
+        <p>Media and communication strategies play a critical role in raising awareness about climate change and inspiring action. These strategies involve using various media platforms—such as television, radio, social media, and print—to effectively communicate climate-related issues, solutions, and urgent calls for action. The goal is to educate the public, influence behavior, and generate support for climate policies. By targeting different audiences with tailored messages, media and communication strategies aim to inform, persuade, and engage people in addressing climate change through personal, community, and political actions.
+        </p>
+        <p>Exmaple:</p>
+        <p>BBC's "Climate Change: The Facts" Documentary</p>
     </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">↑ Back to Top</button>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector("ul");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        // Hide or show navbar
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Show navbar
+        } else {
+            navbar.style.top = "-100px"; // Hide navbar
+        }
+
+        prevScrollPos = currentScrollPos;
+
+        // Show "Scroll to Top" button when scrolling down 100px
+        if (currentScrollPos > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
+
 </body>
 </head>
 </html>
