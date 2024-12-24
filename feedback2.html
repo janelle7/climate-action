@@ -137,6 +137,22 @@
                 margin: 10px 0;
             }
         }
+
+                body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
     </style>
 </head>
 <body>
@@ -151,6 +167,7 @@
     </ul>
 
     <!-- Feedback Form -->
+    <main>
     <div class="container">
         <form>
             <h1>Feedback</h1>
@@ -166,5 +183,10 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    </main>
+        <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+
 </body>
 </html>
