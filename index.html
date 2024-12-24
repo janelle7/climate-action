@@ -3,14 +3,13 @@
 <head>
     <title>Home</title>
     <style>
-         body {
+        body {
             background: url('nature.jpg');
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
         ul {
@@ -47,28 +46,60 @@
             border-radius: 5px;
         }
 
-        /* Content Styling */
+        /* Title Styling */
+        h1 {
+            color: lightblue;
+            font-size: 87px;
+            text-align: center;
+            font-family: "Cooper Black", serif;
+            margin-top: 100px; /* Spacing to avoid overlap with the navbar */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        /* Section Title Styling */
+        h2 {
+            color: white;
+            font-size: 56px;
+            text-align: left;
+            font-family: "Cooper Black", serif;
+            margin-top: 40px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        /* Content Section */
         .content {
-            margin-top: 100px;
+            margin-top: 50px;
             max-width: 1200px;
-            margin: 100px auto 20px;
+            margin: auto;
             padding: 20px;
             color: black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
 
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Animation for Title */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             ul {
                 flex-direction: column;
@@ -78,54 +109,22 @@
             li {
                 margin: 10px 0;
             }
+
+            h1 {
+                font-size: 50px;
+                margin-top: 120px; /* Adjust for smaller screens */
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
-
-        h1 {  
-           color: lightblue;  
-           font-size: 87px;  
-           text-align: center;  
-           font-family: Cooper Black;  
-           position: absolute; 
-          top: 20%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          animation: slideIn 1.5s ease-in-out forwards; 
-          }  
-
-          h2 {  
-           color: white;  
-           font-size: 56px;  
-           text-align: left;  
-           font-family: Cooper Black;  
-          }  
-
-          p {  
-           color: whitesmoke;  
-           font-size: 20px;  
-           text-align: left;  
-           font-family: Comic Sans MS;  
-          }  
-        
-          h1 {        
-            position: absolute;
-            top: 20%;            
-            left: 50%;
-            transform: translate(-50%, -50%);            
-            color: white;
-            text-align: center;            
-            font-size: 72px;
-            margin: 0;            
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);            
-            border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
-
-                                /* Back to Top Button */
-        #scrollToTopBtn {
+                              /* Back to Top Button */
+                              #scrollToTopBtn {
             display: none; /* Hidden by default */
             position: fixed;
             bottom: 20px;
@@ -158,7 +157,8 @@
             padding: 10px;
             font-size: 0.9em;
         }
-        .climate-button {
+                 /* Climate Reality Project Button */
+                 .climate-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #09862a;
@@ -176,6 +176,7 @@
         }
 
     </style>
+</head>
 <body>
     <!-- Navigation Bar -->
     <ul>
@@ -187,58 +188,58 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
+    <!-- Main Content -->
     <main>
-    <div class = "content">
-        <h1>CLIMATE ACTION</h1>
-        <br>
-        <h2>Introduction to Climate Action</h2>
-        <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
-        <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
-        <!-- Climate Action Button -->
-<a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>
-    </div>
-    </main>
-
-    <footer>
-        &copy; 2024 Climate. All rights reserved.
-    </footer>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn">↑ Back to Top</button>
-
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("ul");
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-
-        // Hide or show navbar
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0"; // Show navbar
-        } else {
-            navbar.style.top = "-100px"; // Hide navbar
-        }
-
-        prevScrollPos = currentScrollPos;
-
-        // Show "Scroll to Top" button when scrolling down 100px
-        if (currentScrollPos > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        <div class = "content">
+            <h1>CLIMATE ACTION</h1>
+            <br>
+            <h2>Introduction to Climate Action</h2>
+            <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
+            <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
+            <!-- Climate Action Button -->
+    <a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>    
+        </div>
+        </main>
+    
+        <footer>
+            &copy; 2024 Climate. All rights reserved.
+        </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("ul");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+    
+            // Hide or show navbar
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0"; // Show navbar
+            } else {
+                navbar.style.top = "-100px"; // Hide navbar
+            }
+    
+            prevScrollPos = currentScrollPos;
+    
+            // Show "Scroll to Top" button when scrolling down 100px
+            if (currentScrollPos > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>    
-
+    </script>    
+    
 </body>
-</head>
 </html>
