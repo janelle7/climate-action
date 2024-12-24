@@ -85,84 +85,78 @@
            font-size: 87px;  
            text-align: center;  
            font-family: Cooper Black;  
+           position: absolute; 
+          top: 20%; 
+          left: 50%; 
+          transform: translate(-50%, -50%); 
+          background-color: rgba(0, 0, 0, 0.5); 
+          padding: 20px; 
+          border-radius: 10px; 
+          animation: slideIn 1.5s ease-in-out forwards; 
           }  
 
           h2 {  
-           color: white;  
-           font-size: 46px;  
+           color: red;  
+           font-size: 56px;  
            text-align: left;  
            font-family: Cooper Black;  
           }  
 
           p {  
-           color:red;  
+           color: white;  
            font-size: 20px;  
            text-align: left;  
            font-family: Comic Sans MS;  
           }  
-
-          h1 {        position: absolute;
-            top: 20%;
+        
+          h1 {        
+            position: absolute;
+            top: 20%;            
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);            
             color: white;
-            text-align: center;
-            font-size: 60px;
+            text-align: center;            
+            font-size: 72px;
             margin: 0;            
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);            
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;
-                }
+            animation: slideIn 1.5s ease-in-out forwards;        
+          }
 
-#content h2{
-  margin-top:100px;
-}
-
-#content h2 {
-    max-width: 1200px;
-    margin: 100px auto 20px;
-    padding: 20px;
-    color: red;
-    background-color: rgba(0, 0, 0, 0.3); /* Add a background for better contrast */
-    text-align: center;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
-}
-
-
-            #content{/*for the products to display from left to 
-            right if not it will display one straightline from top to bottom*/
-            display: flex;
-            justify-content: space-between;
-            padding-top: 30px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-            }
-
-            .text1, .text2, .text3, .text4 {
-            display: flex; /* Enable flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            width: 28%;
-            min-width: 250px;
-            padding: 10px 12px;
-            border: 1px solid #cce7d0;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-            margin: 15px 0;
-            transition: 0.2s ease;
-            position: relative;
+                      /* Back to Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
             color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .text1 a,.text2 a,.text3 a,.text4 a{
-          text-decoration: none;
-            color: white;
-            font-size: 20px;
-            font-family: Comic Sans MS;
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
             text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
         }
     </style>
 <body>
@@ -176,22 +170,86 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <div id = "content">
+    <main>
+    <div class = "content">
         <h1>Climate Change Adaptation</h1>
-        <h2>Strategies to cope with the impacts of climate change.</h2>
-        <div class = "text1">
-          <a href="disaster risk.html">(i) Disaster Risk Reduction</a>
-          </div>
-          <div class = "text2">  
-            <a href="water management.html">(ii) Water Management</a>
-          </div>
-        <div class = "text3">
-          <a href="coastal zone management.html">(iii) Coastal Zone Management</a>
-        </div>
-        <div class = "text4"> 
-          <a href="agriculture and food security.html">(iv) Agriculture and Food Security</a>
-        </div>
-        </div>
+        <br>
+        <h2>Introduction to Climate Change Adaptation</h2>
+        <p>Climate change adaptation refers to the process of making adjustments to social, economic, and environmental practices in response to the impacts of climate change. 
+            While mitigation focuses on reducing greenhouse gas emissions, adaptation involves preparing for and managing the inevitable changes in climate patterns.
+            This includes actions like building resilient infrastructure, protecting water resources, improving agricultural practices, and enhancing disaster preparedness. 
+            Adaptation strategies help communities and ecosystems cope with the increasing frequency of extreme weather events, rising sea levels, and other climate-related challenges.
+        </p>
+        <h2>(i) Disaster Risk Reduction (DRR)</h2>
+        <p>Disaster Risk Reduction (DRR) refers to the strategies and measures taken to minimize the impact of natural and man-made disasters on communities and environments.
+            It involves understanding disaster risks, planning and implementing preventive actions, and strengthening resilience. 
+            DRR includes activities such as early warning systems, disaster preparedness, improving infrastructure, and promoting sustainable land use. 
+            By reducing vulnerability and enhancing the ability to respond to disasters, DRR helps protect lives, property, and livelihoods, while also supporting long-term climate change adaptation efforts.
+        </p>
+        <p>Exmaple:</p>
+        <p>Implementation of flood management systems in flood-prone areas.</p>
+        <h2>(ii) Water Management</h2>
+        <p>Water management refers to the sustainable use, conservation, and distribution of water resources to meet the needs of people, ecosystems, and industries while ensuring that water remains available for future generations. 
+            As climate change intensifies, water management becomes increasingly crucial for adapting to altered precipitation patterns, droughts, and floods. It includes strategies such as efficient irrigation techniques, water recycling, rainwater harvesting, and the development of infrastructure to store and manage water.
+            Effective water management is essential for maintaining food security, public health, and economic stability, especially in regions facing water scarcity or extreme weather events.
+        </p>
+        <p>Exmaple:</p>
+        <p>Use of drip irrigation systems in agriculture, particularly in water-scarce regions like Israel. </p>
+        <h2>(iii) Coastal Zone Management (CZM)</h2>
+        <p>Coastal Zone Management (CZM) is the integrated planning and management of coastal areas to balance environmental, economic, and social needs while minimizing the impact of human activities and climate change.
+            It involves protecting coastal ecosystems, such as mangroves, coral reefs, and wetlands, while promoting sustainable development, tourism, and fisheries. 
+            CZM also includes strategies to combat rising sea levels, coastal erosion, and extreme weather events. Effective coastal zone management is vital for maintaining biodiversity, safeguarding coastal communities, and ensuring the long-term resilience of coastal areas in the face of climate change.
+        </p>
+        <p>Exmaple:</p>
+        <p>Dutch Delta Works project in the Netherlands.</p>
+        <h2>(iv) Agriculture and Food Security</h2>
+        <p>Agriculture and food security are central to addressing the challenges of climate change and ensuring sustainable development. Agriculture plays a vital role in providing food, livelihoods, and economic stability, particularly in rural areas. However, climate change, with its impacts on weather patterns, water availability, and pests, poses significant threats to agricultural productivity. Food security means ensuring that all people have access to sufficient, nutritious food at all times, regardless of climate or economic conditions.</p>
+        <p>Sustainable agricultural practices, such as drought-resistant crops, agroforestry, and improved irrigation techniques, are essential for maintaining food production in the face of climate change. In addition, reducing food waste, improving distribution systems, and supporting local farmers can help enhance food security and resilience to climate-related disruptions.</p>
+        <P>Exmaples:</P>
+        <p>Use of drought-resistant crops.</p>
+    </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">↑ Back to Top</button>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector("ul");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        // Hide or show navbar
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Show navbar
+        } else {
+            navbar.style.top = "-100px"; // Hide navbar
+        }
+
+        prevScrollPos = currentScrollPos;
+
+        // Show "Scroll to Top" button when scrolling down 100px
+        if (currentScrollPos > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
+
 </body>
 </head>
 </html>
