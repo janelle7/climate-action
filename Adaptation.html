@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adaptation</title>
     <style>
-         body {
+        body {
             background: url('animal.jpg');
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
         ul {
@@ -49,28 +46,60 @@
             border-radius: 5px;
         }
 
-        /* Content Styling */
+        /* Title Styling */
+        h1 {
+            color: lightblue;
+            font-size: 87px;
+            text-align: center;
+            font-family: "Cooper Black", serif;
+            margin-top: 100px; /* Spacing to avoid overlap with the navbar */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        /* Section Title Styling */
+        h2 {
+            color: red;
+            font-size: 56px;
+            text-align: left;
+            font-family: "Cooper Black", serif;
+            margin-top: 40px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        /* Content Section */
         .content {
-            margin-top: 100px;
+            margin-top: 50px;
             max-width: 1200px;
-            margin: 100px auto 20px;
+            margin: auto;
             padding: 20px;
             color: black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
 
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Animation for Title */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             ul {
                 flex-direction: column;
@@ -80,54 +109,22 @@
             li {
                 margin: 10px 0;
             }
+
+            h1 {
+                font-size: 50px;
+                margin-top: 120px; /* Adjust for smaller screens */
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
-
-        h1 {  
-           color: lightblue;  
-           font-size: 87px;  
-           text-align: center;  
-           font-family: Cooper Black;  
-           position: absolute; 
-          top: 20%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          animation: slideIn 1.5s ease-in-out forwards; 
-          }  
-
-          h2 {  
-           color: red;  
-           font-size: 56px;  
-           text-align: left;  
-           font-family: Cooper Black;  
-          }  
-
-          p {  
-           color: white;  
-           font-size: 20px;  
-           text-align: left;  
-           font-family: Comic Sans MS;  
-          }  
-        
-          h1 {        
-            position: absolute;
-            top: 20%;            
-            left: 50%;
-            transform: translate(-50%, -50%);            
-            color: white;
-            text-align: center;            
-            font-size: 72px;
-            margin: 0;            
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);            
-            border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
-
-                      /* Back to Top Button */
-        #scrollToTopBtn {
+                              /* Back to Top Button */
+                              #scrollToTopBtn {
             display: none; /* Hidden by default */
             position: fixed;
             bottom: 20px;
@@ -160,7 +157,8 @@
             padding: 10px;
             font-size: 0.9em;
         }
-                .climate-button {
+                 /* Climate Reality Project Button */
+                 .climate-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #021da0;
@@ -177,42 +175,8 @@
             background-color: #1656ec;
         }
 
-        /* Media Queries for responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .climate-button {
-                width: 100%;
-                padding: 18px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 30px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-
-            .climate-button {
-                font-size: 14px;
-                padding: 15px;
-            }
-        }
     </style>
+</head>
 <body>
     <!-- Navigation Bar -->
     <ul>
@@ -224,91 +188,94 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
+    <!-- Main Content -->
     <main>
-    <div class = "content">
-        <h1>Climate Change Adaptation</h1>
-        <br>
-        <h2>Introduction to Climate Change Adaptation</h2>
-        <p>Climate change adaptation refers to the process of making adjustments to social, economic, and environmental practices in response to the impacts of climate change. 
-            While mitigation focuses on reducing greenhouse gas emissions, adaptation involves preparing for and managing the inevitable changes in climate patterns.
-            This includes actions like building resilient infrastructure, protecting water resources, improving agricultural practices, and enhancing disaster preparedness. 
-            Adaptation strategies help communities and ecosystems cope with the increasing frequency of extreme weather events, rising sea levels, and other climate-related challenges.
-        </p>
-        <h2>(i) Disaster Risk Reduction (DRR)</h2>
-        <p>Disaster Risk Reduction (DRR) refers to the strategies and measures taken to minimize the impact of natural and man-made disasters on communities and environments.
-            It involves understanding disaster risks, planning and implementing preventive actions, and strengthening resilience. 
-            DRR includes activities such as early warning systems, disaster preparedness, improving infrastructure, and promoting sustainable land use. 
-            By reducing vulnerability and enhancing the ability to respond to disasters, DRR helps protect lives, property, and livelihoods, while also supporting long-term climate change adaptation efforts.
-        </p>
-        <p>Exmaple:</p>
-        <p>Implementation of flood management systems in flood-prone areas.</p>
-        <a href="https://www.floodmanagement.info/" target="_blank" class="climate-button">Learn More About Flood Management Systems</a>
-        <h2>(ii) Water Management</h2>
-        <p>Water management refers to the sustainable use, conservation, and distribution of water resources to meet the needs of people, ecosystems, and industries while ensuring that water remains available for future generations. 
-            As climate change intensifies, water management becomes increasingly crucial for adapting to altered precipitation patterns, droughts, and floods. It includes strategies such as efficient irrigation techniques, water recycling, rainwater harvesting, and the development of infrastructure to store and manage water.
-            Effective water management is essential for maintaining food security, public health, and economic stability, especially in regions facing water scarcity or extreme weather events.
-        </p>
-        <p>Exmaple:</p>
-        <p>Use of drip irrigation systems in agriculture, particularly in water-scarce regions like Israel. </p>
-        <!-- Drip Irrigation Systems Button -->
-<a href="https://www.israelagri.com/drip-irrigation" target="_blank" class="climate-button">Learn More About Drip Irrigation in Agriculture</a>
-        <h2>(iii) Coastal Zone Management (CZM)</h2>
-        <p>Coastal Zone Management (CZM) is the integrated planning and management of coastal areas to balance environmental, economic, and social needs while minimizing the impact of human activities and climate change.
-            It involves protecting coastal ecosystems, such as mangroves, coral reefs, and wetlands, while promoting sustainable development, tourism, and fisheries. 
-            CZM also includes strategies to combat rising sea levels, coastal erosion, and extreme weather events. Effective coastal zone management is vital for maintaining biodiversity, safeguarding coastal communities, and ensuring the long-term resilience of coastal areas in the face of climate change.
-        </p>
-        <p>Exmaple:</p>
-        <p>Dutch Delta Works project in the Netherlands.</p>
-        <a href="https://www.holland.com/global/tourism/getting-around/interests/land-of-water/delta-works" target="_blank" class="climate-button">Learn More About the Dutch Delta Works Project</a>
-        <h2>(iv) Agriculture and Food Security</h2>
-        <p>Agriculture and food security are central to addressing the challenges of climate change and ensuring sustainable development. Agriculture plays a vital role in providing food, livelihoods, and economic stability, particularly in rural areas. However, climate change, with its impacts on weather patterns, water availability, and pests, poses significant threats to agricultural productivity. Food security means ensuring that all people have access to sufficient, nutritious food at all times, regardless of climate or economic conditions.</p>
-        <p>Sustainable agricultural practices, such as drought-resistant crops, agroforestry, and improved irrigation techniques, are essential for maintaining food production in the face of climate change. In addition, reducing food waste, improving distribution systems, and supporting local farmers can help enhance food security and resilience to climate-related disruptions.</p>
-        <P>Exmaples:</P>
-        <p>Use of drought-resistant crops.</p>
-        <a href="https://www.sciencedirect.com/science/article/pii/S0743016723002292" target="_blank" class="climate-button">Learn More About Drought-Resistant Crops</a>
-    </div>
-    </main>
-
-    <footer>
-        &copy; 2024 Climate-Action. All rights reserved.
-    </footer>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn">↑ Back to Top</button>
-
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("ul");
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-
-        // Hide or show navbar
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0"; // Show navbar
-        } else {
-            navbar.style.top = "-100px"; // Hide navbar
-        }
-
-        prevScrollPos = currentScrollPos;
-
-        // Show "Scroll to Top" button when scrolling down 100px
-        if (currentScrollPos > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        <div class = "content">
+            <h1>Climate Change Adaptation</h1>
+            <br>
+            <h2>Introduction to Climate Change Adaptation</h2>
+            <p>Climate change adaptation refers to the process of making adjustments to social, economic, and environmental practices in response to the impacts of climate change. 
+                While mitigation focuses on reducing greenhouse gas emissions, adaptation involves preparing for and managing the inevitable changes in climate patterns.
+                This includes actions like building resilient infrastructure, protecting water resources, improving agricultural practices, and enhancing disaster preparedness. 
+                Adaptation strategies help communities and ecosystems cope with the increasing frequency of extreme weather events, rising sea levels, and other climate-related challenges.
+            </p>
+            <h2>(i) Disaster Risk Reduction (DRR)</h2>
+            <p>Disaster Risk Reduction (DRR) refers to the strategies and measures taken to minimize the impact of natural and man-made disasters on communities and environments.
+                It involves understanding disaster risks, planning and implementing preventive actions, and strengthening resilience. 
+                DRR includes activities such as early warning systems, disaster preparedness, improving infrastructure, and promoting sustainable land use. 
+                By reducing vulnerability and enhancing the ability to respond to disasters, DRR helps protect lives, property, and livelihoods, while also supporting long-term climate change adaptation efforts.
+            </p>
+            <p>Exmaple:</p>
+            <p>Implementation of flood management systems in flood-prone areas.</p>
+            <!-- Flood Management Systems Button -->
+    <a href="https://www.floodmanagement.info/" target="_blank" class="climate-button">Learn More About Flood Management Systems</a>
+            <h2>(ii) Water Management</h2>
+            <p>Water management refers to the sustainable use, conservation, and distribution of water resources to meet the needs of people, ecosystems, and industries while ensuring that water remains available for future generations. 
+                As climate change intensifies, water management becomes increasingly crucial for adapting to altered precipitation patterns, droughts, and floods. It includes strategies such as efficient irrigation techniques, water recycling, rainwater harvesting, and the development of infrastructure to store and manage water.
+                Effective water management is essential for maintaining food security, public health, and economic stability, especially in regions facing water scarcity or extreme weather events.
+            </p>
+            <p>Exmaple:</p>
+            <p>Use of drip irrigation systems in agriculture, particularly in water-scarce regions like Israel. </p>
+            <!-- Drip Irrigation Systems Button -->
+    <a href="https://www.israelagri.com/drip-irrigation" target="_blank" class="climate-button">Learn More About Drip Irrigation in Agriculture</a>
+            <h2>(iii) Coastal Zone Management (CZM)</h2>
+            <p>Coastal Zone Management (CZM) is the integrated planning and management of coastal areas to balance environmental, economic, and social needs while minimizing the impact of human activities and climate change.
+                It involves protecting coastal ecosystems, such as mangroves, coral reefs, and wetlands, while promoting sustainable development, tourism, and fisheries. 
+                CZM also includes strategies to combat rising sea levels, coastal erosion, and extreme weather events. Effective coastal zone management is vital for maintaining biodiversity, safeguarding coastal communities, and ensuring the long-term resilience of coastal areas in the face of climate change.
+            </p>
+            <p>Exmaple:</p>
+            <p>Dutch Delta Works project in the Netherlands.</p>
+            <!-- Dutch Delta Works Button -->
+    <a href="https://www.holland.com/global/tourism/getting-around/interests/land-of-water/delta-works" target="_blank" class="climate-button">Learn More About the Dutch Delta Works Project</a>
+            <h2>(iv) Agriculture and Food Security</h2>
+            <p>Agriculture and food security are central to addressing the challenges of climate change and ensuring sustainable development. Agriculture plays a vital role in providing food, livelihoods, and economic stability, particularly in rural areas. However, climate change, with its impacts on weather patterns, water availability, and pests, poses significant threats to agricultural productivity. Food security means ensuring that all people have access to sufficient, nutritious food at all times, regardless of climate or economic conditions.</p>
+            <p>Sustainable agricultural practices, such as drought-resistant crops, agroforestry, and improved irrigation techniques, are essential for maintaining food production in the face of climate change. In addition, reducing food waste, improving distribution systems, and supporting local farmers can help enhance food security and resilience to climate-related disruptions.</p>
+            <P>Exmaples:</P>
+            <p>Use of drought-resistant crops.</p>
+            <!-- Drought-Resistant Crops Button -->
+    <a href="https://www.sciencedirect.com/science/article/pii/S0743016723002292" target="_blank" class="climate-button">Learn More About Drought-Resistant Crops</a>    
+        </div>
+        </main>
+    
+        <footer>
+            &copy; 2024 Climate. All rights reserved.
+        </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("ul");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+    
+            // Hide or show navbar
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0"; // Show navbar
+            } else {
+                navbar.style.top = "-100px"; // Hide navbar
+            }
+    
+            prevScrollPos = currentScrollPos;
+    
+            // Show "Scroll to Top" button when scrolling down 100px
+            if (currentScrollPos > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>    
-
+    </script>    
+    
 </body>
-</head>
 </html>
