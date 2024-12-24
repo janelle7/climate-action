@@ -85,88 +85,79 @@
            font-size: 87px;  
            text-align: center;  
            font-family: Cooper Black;  
+           position: absolute; 
+          top: 20%; 
+          left: 50%; 
+          transform: translate(-50%, -50%); 
+          background-color: rgba(0, 0, 0, 0.5); 
+          padding: 20px; 
+          border-radius: 10px; 
+          animation: slideIn 1.5s ease-in-out forwards; 
           }  
 
           h2 {  
-           color: white;  
-           font-size: 46px;  
+           color: red;  
+           font-size: 56px;  
            text-align: left;  
            font-family: Cooper Black;  
           }  
 
           p {  
-           color:red;  
+           color: white;  
            font-size: 20px;  
            text-align: left;  
            font-family: Comic Sans MS;  
           }  
-
-          h1 {        position: absolute;
-            top: 20%;
+        
+          h1 {        
+            position: absolute;
+            top: 20%;            
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);            
             color: white;
-            text-align: center;
-            font-size: 60px;
+            text-align: center;            
+            font-size: 72px;
             margin: 0;            
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);            
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;
-                }
-            
-                #content h2{
-  margin-top:100px;
-}
+            animation: slideIn 1.5s ease-in-out forwards;        
+          }
 
-#content h2{
-                max-width: 1200px;
-                margin: 100px auto 20px;
-                padding: 20px;
-                color: red;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                background-color: rgba(0, 0, 0, 0.3); /* Add a background for better contrast */
-                text-align: center;
-                border-radius: 10px; /* Optional: rounded corners */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
-            }
-
-            #content{/*for the products to display from left to 
-            right if not it will display one straightline from top to bottom*/
-            display: flex;
-            justify-content: space-between;
-            padding-top: 30px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-            }
-
-            .text1, .text2, .text3 {
-            display: flex; /* Enable flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            width: 28%;
-            min-width: 250px;
-            padding: 10px 12px;
-            border: 1px solid ;
-            border-radius: 25px;
+                      /* Back to Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-            margin: 15px 0;
-            transition: 0.2s ease;
-            position: relative;
-            color: black;
+            font-size: 16px;
         }
 
-        .text1 a,.text2 a,.text3 a{
-            text-decoration: none;
-            color: white
-            ;
-            font-size: 20px;
-            font-family: Comic Sans MS;
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
             text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
         }
-
-
     </style>
 <body>
     <!-- Navigation Bar -->
@@ -179,20 +170,72 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <div id = "content">
+    <main>
+    <div class = "content">
         <h1>Climate Policy and Governance</h1>
-        <h2>Policies and regulations to address climate change.</h2>
-        <div class = "text1">
-          <a href="international climate agreements.html">(i) International Climate Agreements</a>
-          </div>
-          <div class = "text2">
-          <a href="national climate polices.html">(ii) National Climate Policies</a>
-          </div>
-          <div class = "text3">
-          <a href="Local Climate Action Plans.html">(iii) Local Climate Action Plans</a>
-          </div>
-      
+        <br>
+        <h2>Introduction to Climate Policy and Governance</h2>
+        <p>Climate policy and governance involve the creation and implementation of laws, regulations, and strategies aimed at addressing climate change. It includes both national and international efforts to reduce greenhouse gas emissions, promote renewable energy, and adapt to climate impacts. Effective governance ensures that stakeholders, including governments, businesses, and communities, work together to achieve climate goals. Strong climate policies also help drive innovation, support sustainable development, and ensure that vulnerable populations are protected from the effects of climate change.
+        </p>
+        <h2>(i) International Climate Agreements</h2>
+        <p>
+            International climate agreements are collaborative efforts between countries to address global climate change. These agreements set targets for reducing greenhouse gas emissions, promoting sustainability, and enhancing climate resilience. The most notable of these is the **Paris Agreement**, adopted in 2015 under the United Nations Framework Convention on Climate Change (UNFCCC), which aims to limit global temperature rise to well below 2°C above pre-industrial levels. International climate agreements foster cooperation among nations, ensuring that climate action is globally coordinated and that both developed and developing countries contribute to tackling climate change based on their capabilities and responsibilities.
+        </p>
+        <p>Exmaple:</p>
+        <p>Paris Agreement (2015)</p>
+        <h2>(ii) National Climate Policies</h2>
+        <p>National climate policies are government-led strategies and actions designed to address climate change within a country’s borders. These policies aim to reduce greenhouse gas emissions, promote renewable energy, enhance energy efficiency, and increase resilience to climate impacts. They may include regulations, incentives, and programs that encourage sustainable practices in sectors such as energy, transportation, agriculture, and industry. National climate policies are crucial for meeting international climate commitments, ensuring economic and environmental sustainability, and protecting vulnerable populations from the effects of climate change.
+        </p>
+        <p>Exmaple:</p>
+        <p>Germany's Energiewende (Energy Transition)</p>
+        <h2>(iii) Local Climate Action Plans</h2>
+        <p>Local Climate Action Plans (LCAPs) are strategies developed by cities, municipalities, or local governments to address climate change at the community level. These plans outline specific measures to reduce greenhouse gas emissions, improve energy efficiency, and enhance climate resilience in local areas. LCAPs often focus on sectors such as transportation, waste management, urban planning, and energy use. They also include adaptation strategies to help communities cope with the impacts of climate change, such as flooding, heatwaves, or sea-level rise. Local climate action plans are essential for fostering sustainable, climate-resilient cities and communities, and they often complement national and international climate goals.
+        </p>
+        <p>Exmaple:</p>
+        <p>The City of Copenhagen’s Climate Action Plan (Denmark)</p>
     </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">↑ Back to Top</button>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector("ul");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        // Hide or show navbar
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Show navbar
+        } else {
+            navbar.style.top = "-100px"; // Hide navbar
+        }
+
+        prevScrollPos = currentScrollPos;
+
+        // Show "Scroll to Top" button when scrolling down 100px
+        if (currentScrollPos > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
+
 </body>
 </head>
 </html>
