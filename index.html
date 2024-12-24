@@ -124,6 +124,40 @@
             animation: slideIn 1.5s ease-in-out forwards;        
           }
 
+                                /* Back to Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+        }
     </style>
 <body>
     <!-- Navigation Bar -->
@@ -136,6 +170,7 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
+    <main>
     <div class = "content">
         <h1>CLIMATE ACTION</h1>
         <br>
@@ -143,6 +178,47 @@
         <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
         <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
     </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">↑ Back to Top</button>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector("ul");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        // Hide or show navbar
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Show navbar
+        } else {
+            navbar.style.top = "-100px"; // Hide navbar
+        }
+
+        prevScrollPos = currentScrollPos;
+
+        // Show "Scroll to Top" button when scrolling down 100px
+        if (currentScrollPos > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
 
 </body>
 </head>
