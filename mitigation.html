@@ -4,7 +4,7 @@
     <title>Mitigation</title>
     <style>
          body {
-            background: url('snow.jpg');
+            background: url('snow2.jpg');
             background-size: cover;
             color: white;
             margin: 0;
@@ -81,85 +81,82 @@
         }
 
         h1 {  
-           color: darkslategray;  
+           color: lightblue;  
            font-size: 87px;  
            text-align: center;  
            font-family: Cooper Black;  
-        }  
-        
-        h2 {  
+           position: absolute; 
+          top: 20%; 
+          left: 50%; 
+          transform: translate(-50%, -50%); 
+          background-color: rgba(0, 0, 0, 0.5); 
+          padding: 20px; 
+          border-radius: 10px; 
+          animation: slideIn 1.5s ease-in-out forwards; 
+          }  
+
+          h2 {  
            color: red;  
-           font-size: 48px;  
+           font-size: 56px;  
            text-align: left;  
            font-family: Cooper Black;  
-        }  
+          }  
 
-        p {  
-           color: black;  
+          p {  
+           color: white;  
            font-size: 20px;  
            text-align: left;  
            font-family: Comic Sans MS;  
-        }  
-
-        h1 {        position: absolute;
-            top: 20%;
+          }  
+        
+          h1 {        
+            position: absolute;
+            top: 20%;            
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);            
             color: white;
-            text-align: center;
-            font-size: 60px;
+            text-align: center;            
+            font-size: 72px;
             margin: 0;            
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);            
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;
-                }
+            animation: slideIn 1.5s ease-in-out forwards;        
+          }
 
-                #content{
-  margin-top:100px;
-}
-
-#content h2{
-                max-width: 1200px;
-                margin: 100px auto 20px;
-                padding: 20px;
-                color: red;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-
-            #content{/*for the products to display from left to 
-            right if not it will display one straightline from top to bottom*/
-            display: flex;
-            justify-content: space-between;
-            padding-top: 30px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-            }
-
-            .text1, .text2, .text3, .text4 {
-            display: flex; /* Enable flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            width: 28%;
-            min-width: 250px;
-            padding: 10px 12px;
-            border: 1px solid ;
-            border-radius: 25px;
+                      /* Back to Top Button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-            margin: 15px 0;
-            transition: 0.2s ease;
-            position: relative;
-            color: black;
+            font-size: 16px;
         }
 
-        .text1 a,.text2 a,.text3 a,.text4 a{
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            font-family: Comic Sans MS;
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
             text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
         }
     </style>
 <body>
@@ -173,22 +170,81 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <div id = "content">
+    <main>
+    <div class = "content">
         <h1>Climate Change Mitigation</h1>
-        <h2>Strategies to reduce greenhouse gas emissions.</h2>
-        <div class = "text1">
-        <a href="renewable energy.html">(i) Renewable Energy Sources</a>
-        </div>
-        <div class = "text2">
-        <a href="energy efficiency.html">(ii) Energy Efficiency</a>
-        </div>
-        <div class = "text3">
-        <a href="sustainable transportation.html">(iii) Sustainable Transportation</a>
-        </div>
-        <div class = "text4">
-        <a href="carbon capture.html">(iv) Carbon Capture and Storage</a>
-        </div>
+        <br>
+        <h2>Introduction to Climate Change Mitigation</h2>
+        <p>Climate change mitigation involves reducing greenhouse gas emissions to slow global warming and its impacts.Strategies include transitioning to renewable energy, improving energy efficiency, adopting sustainable transportation, and implementing carbon capture technologies.These efforts aim to create a sustainable, resilient future for the planet.
+        <h2>(i) Renewable Energy Sources</h2>
+        <p>Renewable energy sources are energy sources that are naturally replenished and environmentally sustainable, such as solar, wind, hydro, and geothermal power. 
+        Unlike fossil fuels, these energy sources produce little to no greenhouse gas emissions, making them essential in the fight against climate change.
+        The transition to renewable energy is key to reducing reliance on non-renewable resources, lowering carbon footprints, and ensuring a cleaner, more sustainable energy future.</p>
+        <p>Exmaples:</p>
+        <p>Using solar, wind, and hydroelectric energy to replace fossil fuels.</p>
+        <h2>(ii) Energy Efficiency</h2>
+        <p>Energy efficiency refers to using less energy to perform the same task or produce the same outcome.
+        By improving energy efficiency in industries, homes, and transportation, we can reduce energy consumption, lower greenhouse gas emissions, and save costs. 
+        Adopting energy-efficient technologies and practices is a crucial strategy for mitigating climate change and promoting sustainable development, as it helps to minimize waste and optimize resource use.</p>
+        <p>Exmaples:</p>
+        <p>Improving efficiency in industries and households to use less energy.</p>
+        <h2>(iii) Sustainable Transportation</h2>
+        <p>Sustainable transportation focuses on reducing the environmental impact of travel by promoting alternatives to traditional fossil-fuel-powered vehicles.
+            This includes electric vehicles, public transportation, cycling, walking, and the development of green infrastructure. 
+            By adopting sustainable transportation methods, we can lower greenhouse gas emissions, reduce air pollution, and create more livable urban spaces.
+            Transitioning to sustainable transportation is a key component of addressing climate change while improving public health and mobility.</p>
+        <p>Exmaples:</p>
+        <p>Promoting electric vehicles and public transportation.</p>
+        <h2>(iv) Carbon Capture and Storage</h2>
+        <p>Carbon Capture and Storage (CCS) is a technology designed to reduce carbon dioxide (CO2) emissions from industrial sources by capturing the CO2 before it enters the atmosphere and storing it underground. 
+            This process helps mitigate the impact of fossil fuel use on the environment by preventing CO2, a major greenhouse gas, from contributing to global warming. 
+            CCS is considered a crucial tool in the transition to a low-carbon economy, particularly for industries that are difficult to decarbonize.
+        </p>
+        <P>Exmaples:</P>
+        <p>Capturing and storing carbon dioxide from power plants and industries.</p>
     </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Climate. All rights reserved.
+    </footer>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn">↑ Back to Top</button>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector("ul");
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+
+        // Hide or show navbar
+        if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = "0"; // Show navbar
+        } else {
+            navbar.style.top = "-100px"; // Hide navbar
+        }
+
+        prevScrollPos = currentScrollPos;
+
+        // Show "Scroll to Top" button when scrolling down 100px
+        if (currentScrollPos > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>    
+
 </body>
 </head>
 </html>
