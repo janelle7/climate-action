@@ -15,6 +15,15 @@
             padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 10px;
+        }
         ul {
             list-style-type: none;
             margin: 0;
@@ -71,14 +80,66 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
-        @media (max-width: 768px) {
+      /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            justify-content: space-between;
+            width: 25px;
+            height: 20px;
+        }
+
+        .hamburger div {
+            background-color: white;
+            height: 4px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .mobile-menu li {
+            margin: 10px 0;
+        }
+
+        /* Media Query for mobile devices */
+        @media screen and (max-width: 768px) {
             ul {
+                display: none;
                 flex-direction: column;
-                align-items: center;
+                width: 100%;
+                text-align: center;
             }
 
-            li {
-                margin: 10px 0;
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            ul.show {
+                display: flex;
+            }
+
+            .mobile-menu a {
+                font-size: 20px;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                text-decoration: none;
+            }
+
+            .mobile-menu a:hover {
+                background-color: #444;
             }
         }
 
@@ -176,69 +237,6 @@
         .climate-button:hover {
             background-color: #2eb444;
         }
-
-       /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            justify-content: space-between;
-            width: 25px;
-            height: 20px;
-        }
-
-        .hamburger div {
-            background-color: white;
-            height: 4px;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        .mobile-menu li {
-            margin: 10px 0;
-        }
-
-        /* Media Query for mobile devices */
-        @media screen and (max-width: 768px) {
-            ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            ul.show {
-                display: flex;
-            }
-
-            .mobile-menu a {
-                font-size: 20px;
-                padding: 15px 0;
-                background-color: rgba(0, 0, 0, 0.7);
-                color: white;
-                text-decoration: none;
-            }
-
-            .mobile-menu a:hover {
-                background-color: #444;
-            }
-        }
     </style>
 <body>
     <!-- Navigation Bar -->
@@ -285,18 +283,7 @@
 <!-- Scroll to Top Button -->
 <button id="scrollToTopBtn">↑ Back to Top</button>
 
-    <script>
-        // Function to toggle the mobile menu visibility
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            const mobileMenu = document.getElementById("mobileMenu");
-            if (menu.classList.contains("show")) {
-                menu.classList.remove("show");
-            } else {
-                menu.classList.add("show");
-            }
-        }
-    </script>
+  
 <script>
     let prevScrollPos = window.pageYOffset;
     const navbar = document.querySelector("ul");
@@ -329,6 +316,11 @@
             behavior: "smooth"
         });
     });
+    // Toggle Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
 </script>    
 
 </body>
