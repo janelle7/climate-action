@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mitigation</title>
     <style>
-         body {
+        body {
             background: url('snow2.jpg');
             background-size: cover;
             color: white;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
         ul {
@@ -49,28 +46,60 @@
             border-radius: 5px;
         }
 
-        /* Content Styling */
+        /* Title Styling */
+        h1 {
+            color: lightblue;
+            font-size: 87px;
+            text-align: center;
+            font-family: "Cooper Black", serif;
+            margin-top: 100px; /* Spacing to avoid overlap with the navbar */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        /* Section Title Styling */
+        h2 {
+            color: red;
+            font-size: 56px;
+            text-align: left;
+            font-family: "Cooper Black", serif;
+            margin-top: 40px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        /* Content Section */
         .content {
-            margin-top: 100px;
+            margin-top: 50px;
             max-width: 1200px;
-            margin: 100px auto 20px;
+            margin: auto;
             padding: 20px;
             color: black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
 
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Animation for Title */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             ul {
                 flex-direction: column;
@@ -80,54 +109,22 @@
             li {
                 margin: 10px 0;
             }
+
+            h1 {
+                font-size: 50px;
+                margin-top: 120px; /* Adjust for smaller screens */
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
-
-        h1 {  
-           color: lightblue;  
-           font-size: 87px;  
-           text-align: center;  
-           font-family: Cooper Black;  
-           position: absolute; 
-          top: 20%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          animation: slideIn 1.5s ease-in-out forwards; 
-          }  
-
-          h2 {  
-           color: red;  
-           font-size: 56px;  
-           text-align: left;  
-           font-family: Cooper Black;  
-          }  
-
-          p {  
-           color: white;  
-           font-size: 20px;  
-           text-align: left;  
-           font-family: Comic Sans MS;  
-          }  
-        
-          h1 {        
-            position: absolute;
-            top: 20%;            
-            left: 50%;
-            transform: translate(-50%, -50%);            
-            color: white;
-            text-align: center;            
-            font-size: 72px;
-            margin: 0;            
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);            
-            border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
-
-                      /* Back to Top Button */
-        #scrollToTopBtn {
+                              /* Back to Top Button */
+                              #scrollToTopBtn {
             display: none; /* Hidden by default */
             position: fixed;
             bottom: 20px;
@@ -160,10 +157,11 @@
             padding: 10px;
             font-size: 0.9em;
         }
-                .climate-button {
+                 /* Climate Reality Project Button */
+                 .climate-button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #540986;
+            background-color: rgb(80, 131, 203);
             color: white;
             font-size: 18px;
             text-align: center;
@@ -174,45 +172,11 @@
         }
 
         .climate-button:hover {
-            background-color: #8d36b6;
+            background-color: rgb(78, 178, 225);
         }
 
-        /* Media Queries for responsiveness */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .climate-button {
-                width: 100%;
-                padding: 18px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 30px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-
-            .climate-button {
-                font-size: 14px;
-                padding: 15px;
-            }
-        }
     </style>
+</head>
 <body>
     <!-- Navigation Bar -->
     <ul>
@@ -224,87 +188,89 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
+    <!-- Main Content -->
     <main>
-    <div class = "content">
-        <h1>Climate Change Mitigation</h1>
-        <br>
-        <h2>Introduction to Climate Change Mitigation</h2>
-        <p>Climate change mitigation involves reducing greenhouse gas emissions to slow global warming and its impacts.Strategies include transitioning to renewable energy, improving energy efficiency, adopting sustainable transportation, and implementing carbon capture technologies.These efforts aim to create a sustainable, resilient future for the planet.
-        <h2>(i) Renewable Energy Sources</h2>
-        <p>Renewable energy sources are energy sources that are naturally replenished and environmentally sustainable, such as solar, wind, hydro, and geothermal power. 
-        Unlike fossil fuels, these energy sources produce little to no greenhouse gas emissions, making them essential in the fight against climate change.
-        The transition to renewable energy is key to reducing reliance on non-renewable resources, lowering carbon footprints, and ensuring a cleaner, more sustainable energy future.</p>
-        <p>Exmaple:</p>
-        <p>Using solar, wind, and hydroelectric energy to replace fossil fuels.</p>
-        <a href="https://www.irena.org/Energy-Transition/Technology" target="_blank" class="climate-button">Learn More About Renewable Energy</a>
-        <h2>(ii) Energy Efficiency</h2>
-        <p>Energy efficiency refers to using less energy to perform the same task or produce the same outcome.
-        By improving energy efficiency in industries, homes, and transportation, we can reduce energy consumption, lower greenhouse gas emissions, and save costs. 
-        Adopting energy-efficient technologies and practices is a crucial strategy for mitigating climate change and promoting sustainable development, as it helps to minimize waste and optimize resource use.</p>
-        <p>Exmaple:</p>
-        <p>Improving efficiency in industries and households to use less energy.</p>
-        <!-- Energy Efficiency Button -->
-<a href="https://www.energystar.gov/" target="_blank" class="climate-button">Learn More About Energy Efficiency</a>
-        <h2>(iii) Sustainable Transportation</h2>
-        <p>Sustainable transportation focuses on reducing the environmental impact of travel by promoting alternatives to traditional fossil-fuel-powered vehicles.
-            This includes electric vehicles, public transportation, cycling, walking, and the development of green infrastructure. 
-            By adopting sustainable transportation methods, we can lower greenhouse gas emissions, reduce air pollution, and create more livable urban spaces.
-            Transitioning to sustainable transportation is a key component of addressing climate change while improving public health and mobility.</p>
-        <p>Exmaple:</p>
-        <p>Promoting electric vehicles and public transportation.</p>
-        <a href="https://www.urbansdk.com/blog/electric-buses-public-transit" target="_blank" class="climate-button">Learn More About EVs and Public Transportation</a>
-        <h2>(iv) Carbon Capture and Storage</h2>
-        <p>Carbon Capture and Storage (CCS) is a technology designed to reduce carbon dioxide (CO2) emissions from industrial sources by capturing the CO2 before it enters the atmosphere and storing it underground. 
-            This process helps mitigate the impact of fossil fuel use on the environment by preventing CO2, a major greenhouse gas, from contributing to global warming. 
-            CCS is considered a crucial tool in the transition to a low-carbon economy, particularly for industries that are difficult to decarbonize.
-        </p>
-        <P>Exmaples:</P>
-        <p>Capturing and storing carbon dioxide from power plants and industries.</p>
-        <!-- CCS Button -->
-<a href="https://www.globalccsinstitute.com/" target="_blank" class="climate-button">Learn More About Carbon Capture and Storage</a>
-    </div>
-    </main>
-
-    <footer>
-        &copy; 2024 Climate-Action. All rights reserved.
-    </footer>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn">↑ Back to Top</button>
-
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("ul");
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-
-        // Hide or show navbar
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0"; // Show navbar
-        } else {
-            navbar.style.top = "-100px"; // Hide navbar
-        }
-
-        prevScrollPos = currentScrollPos;
-
-        // Show "Scroll to Top" button when scrolling down 100px
-        if (currentScrollPos > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        <div class = "content">
+            <h1>Climate Change Mitigation</h1>
+            <br>
+            <h2>Introduction to Climate Change Mitigation</h2>
+            <p>Climate change mitigation involves reducing greenhouse gas emissions to slow global warming and its impacts.Strategies include transitioning to renewable energy, improving energy efficiency, adopting sustainable transportation, and implementing carbon capture technologies.These efforts aim to create a sustainable, resilient future for the planet.
+            <h2>(i) Renewable Energy Sources</h2>
+            <p>Renewable energy sources are energy sources that are naturally replenished and environmentally sustainable, such as solar, wind, hydro, and geothermal power. 
+            Unlike fossil fuels, these energy sources produce little to no greenhouse gas emissions, making them essential in the fight against climate change.
+            The transition to renewable energy is key to reducing reliance on non-renewable resources, lowering carbon footprints, and ensuring a cleaner, more sustainable energy future.</p>
+            <p>Exmaples:</p>
+            <p>Using solar, wind, and hydroelectric energy to replace fossil fuels.</p>
+            <!-- Renewable Energy Button -->
+    <a href="https://www.irena.org/Energy-Transition/Technology" target="_blank" class="climate-button">Learn More About Renewable Energy</a>
+            <h2>(ii) Energy Efficiency</h2>
+            <p>Energy efficiency refers to using less energy to perform the same task or produce the same outcome.
+            By improving energy efficiency in industries, homes, and transportation, we can reduce energy consumption, lower greenhouse gas emissions, and save costs. 
+            Adopting energy-efficient technologies and practices is a crucial strategy for mitigating climate change and promoting sustainable development, as it helps to minimize waste and optimize resource use.</p>
+            <p>Exmaples:</p>
+            <p>Improving efficiency in industries and households to use less energy.</p>
+            <!-- Energy Efficiency Button -->
+    <a href="https://www.energystar.gov/" target="_blank" class="climate-button">Learn More About Energy Efficiency</a>
+            <h2>(iii) Sustainable Transportation</h2>
+            <p>Sustainable transportation focuses on reducing the environmental impact of travel by promoting alternatives to traditional fossil-fuel-powered vehicles.
+                This includes electric vehicles, public transportation, cycling, walking, and the development of green infrastructure. 
+                By adopting sustainable transportation methods, we can lower greenhouse gas emissions, reduce air pollution, and create more livable urban spaces.
+                Transitioning to sustainable transportation is a key component of addressing climate change while improving public health and mobility.</p>
+            <p>Exmaples:</p>
+            <p>Promoting electric vehicles and public transportation.</p>
+            <!-- Electric Vehicle and Public Transportation Button -->
+    <a href="https://www.urbansdk.com/blog/electric-buses-public-transit" target="_blank" class="climate-button">Learn More About EVs and Public Transportation</a>
+            <h2>(iv) Carbon Capture and Storage</h2>
+            <p>Carbon Capture and Storage (CCS) is a technology designed to reduce carbon dioxide (CO2) emissions from industrial sources by capturing the CO2 before it enters the atmosphere and storing it underground. 
+                This process helps mitigate the impact of fossil fuel use on the environment by preventing CO2, a major greenhouse gas, from contributing to global warming. 
+                CCS is considered a crucial tool in the transition to a low-carbon economy, particularly for industries that are difficult to decarbonize.
+            </p>
+            <P>Exmaples:</P>
+            <p>Capturing and storing carbon dioxide from power plants and industries.</p>
+            <!-- CCS Button -->
+    <a href="https://www.globalccsinstitute.com/" target="_blank" class="climate-button">Learn More About Carbon Capture and Storage</a>    
+        </div>
+        </main>
+    
+        <footer>
+            &copy; 2024 Climate. All rights reserved.
+        </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("ul");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+    
+            // Hide or show navbar
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0"; // Show navbar
+            } else {
+                navbar.style.top = "-100px"; // Hide navbar
+            }
+    
+            prevScrollPos = currentScrollPos;
+    
+            // Show "Scroll to Top" button when scrolling down 100px
+            if (currentScrollPos > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>    
-
+    </script>    
+    
 </body>
-</head>
 </html>
