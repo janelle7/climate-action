@@ -1,30 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-         body {
-            background: url('nature.jpg');
-            background-size: cover;
-            color: white;
+        /* Global Styles */
+        body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            padding-top: 50px; /* Adjust this to account for navbar height */
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('nature.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding-top: 50px;
         }
 
+        /* Navigation Bar */
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            position: fixed; /* Make the navbar fixed at the top */
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000; /* Ensure the navbar stays on top */
+            z-index: 1000;
         }
 
         li {
@@ -32,41 +38,16 @@
         }
 
         li a {
-            display: block;
             color: white;
-            font-size: 18px;
-            text-align: center;
-            font-family: ALGERIAN, sans-serif;
-            padding: 14px 16px;
             text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            font-size: 18px;
         }
 
-        /* Hover effect for links */
         li a:hover {
             background-color: grey;
             border-radius: 5px;
-        }
-
-        /* Content Styling */
-        .content {
-            margin-top: 50px;
-            max-width: 1200px;
-            margin: 100px auto 20px;
-            padding: 20px;
-            color: black;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {
@@ -80,92 +61,42 @@
             }
         }
 
-        h1 {  
-           color: lightblue;  
-           font-size: 87px;  
-           text-align: center;  
-           font-family: Cooper Black;  
-           position: absolute; 
-          top: 20%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          animation: slideIn 1.5s ease-in-out forwards; 
-          }  
-
-          h2 {  
-           color: white;  
-           font-size: 56px;  
-           text-align: left;  
-           font-family: Cooper Black;  
-          }  
-
-          p {  
-           color: whitesmoke;  
-           font-size: 20px;  
-           text-align: left;  
-           font-family: Comic Sans MS;  
-          }  
-        
-          h1 {        
-            position: absolute;
-            top: 20%;            
-            left: 50%;
-            transform: translate(-50%, -50%);            
-            color: white;
-            text-align: center;            
-            font-size: 72px;
-            margin: 0;            
+        /* Content */
+        .content {
+            margin: 100px auto 20px;
+            max-width: 1200px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);            
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
-
-                                /* Back to Top Button */
-        #scrollToTopBtn {
-            display: none; /* Hidden by default */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        #scrollToTopBtn:hover {
-            background-color: #555;
-        }
-
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
+        h1 {
+            font-size: 72px;
             text-align: center;
-            padding: 10px;
-            font-size: 0.9em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
+
+        h2 {
+            font-size: 36px;
+            color: lightblue;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Button */
         .climate-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #09862a;
             color: white;
             font-size: 18px;
-            text-align: center;
-            font-family: 'ALGERIAN', sans-serif;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
@@ -175,70 +106,92 @@
             background-color: #2eb444;
         }
 
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #scrollToTopBtn.show {
+            display: block;
+            opacity: 1;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 14px;
+        }
     </style>
+</head>
 <body>
     <!-- Navigation Bar -->
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="mitigation.html">Mitigation</a></li>
-        <li><a href="Adaptation.html">Adaptation</a></li>
+        <li><a href="adaptation.html">Adaptation</a></li>
         <li><a href="policy.html">Policy</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <main>
-    <div class = "content">
+    <!-- Main Content -->
+    <div class="content">
         <h1>CLIMATE ACTION</h1>
-        <br>
         <h2>Introduction to Climate Action</h2>
-        <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
-        <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
-        <!-- Climate Action Button -->
-<a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>
+        <p>
+            Climate action refers to the collective and individual efforts to address the challenges posed by climate change. 
+            It encompasses reducing carbon emissions, adapting to climate risks, and transitioning to renewable energy sources.
+        </p>
+        <p>
+            These efforts range from global agreements like the Paris Agreement to local community-based initiatives for sustainability.
+        </p>
+        <a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>
     </div>
-    </main>
 
+    <!-- Footer -->
     <footer>
         &copy; 2024 Climate. All rights reserved.
     </footer>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn">↑ Back to Top</button>
 
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("ul");
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
 
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-        // Hide or show navbar
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0"; // Show navbar
-        } else {
-            navbar.style.top = "-100px"; // Hide navbar
-        }
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        };
 
-        prevScrollPos = currentScrollPos;
-
-        // Show "Scroll to Top" button when scrolling down 100px
-        if (currentScrollPos > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>    
-
+    </script>
 </body>
-</head>
 </html>
