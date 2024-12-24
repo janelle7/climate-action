@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-         body {
+        body {
             background: url('nature.jpg');
             background-size: cover;
             color: white;
@@ -15,6 +15,7 @@
             padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
+        /* Navigation Bar Styling */
         nav {
             position: fixed;
             top: 0;
@@ -24,18 +25,14 @@
             background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
             padding: 10px;
         }
+
+        /* Menu List */
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            position: fixed; /* Make the navbar fixed at the top */
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Ensure the navbar stays on top */
         }
 
         li {
@@ -58,29 +55,7 @@
             border-radius: 5px;
         }
 
-        /* Content Styling */
-        .content {
-            margin-top: 100px;
-            max-width: 1200px;
-            margin: 100px auto 20px;
-            padding: 20px;
-            color: black;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-      /* Hamburger Menu */
+        /* Hamburger Menu */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -143,53 +118,31 @@
             }
         }
 
-        h1 {  
-           color: lightblue;  
-           font-size: 87px;  
-           text-align: center;  
-           font-family: Cooper Black;  
-           position: absolute; 
-          top: 20%; 
-          left: 50%; 
-          transform: translate(-50%, -50%); 
-          background-color: rgba(0, 0, 0, 0.5); 
-          padding: 20px; 
-          border-radius: 10px; 
-          animation: slideIn 1.5s ease-in-out forwards; 
-          }  
-
-          h2 {  
-           color: white;  
-           font-size: 56px;  
-           text-align: left;  
-           font-family: Cooper Black;  
-          }  
-
-          p {  
-           color: whitesmoke;  
-           font-size: 20px;  
-           text-align: left;  
-           font-family: Comic Sans MS;  
-          }  
-        
-          h1 {        
-            position: absolute;
-            top: 20%;            
-            left: 50%;
-            transform: translate(-50%, -50%);            
-            color: white;
-            text-align: center;            
-            font-size: 72px;
-            margin: 0;            
+        /* Content Styling */
+        .content {
+            margin-top: 100px;
+            max-width: 1200px;
+            margin: 100px auto 20px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);            
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            animation: slideIn 1.5s ease-in-out forwards;        
-          }
+        }
 
-                                /* Back to Top Button */
+        /* Feedback Form Styling */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Back to Top Button */
         #scrollToTopBtn {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -207,21 +160,13 @@
             background-color: #555;
         }
 
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        main {
-            flex: 1;
-        }
         footer {
             text-align: center;
             padding: 10px;
             font-size: 0.9em;
         }
-                .climate-button {
+
+        .climate-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #09862a;
@@ -238,6 +183,7 @@
             background-color: #2eb444;
         }
     </style>
+</head>
 <body>
     <!-- Navigation Bar -->
     <nav>
@@ -250,7 +196,7 @@
         <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="mitigation.html">Mitigation</a></li>
-            <li><a href="adaptation.html">Adaptation</a></li>
+            <li><a href="Adaptation.html">Adaptation</a></li>
             <li><a href="policy.html">Policy</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="feedback2.html">Feedback</a></li>
@@ -259,70 +205,66 @@
         <ul id="mobileMenu" class="mobile-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="mitigation.html">Mitigation</a></li>
-            <li><a href="adaptation.html">Adaptation</a></li>
+            <li><a href="Adaptation.html">Adaptation</a></li>
             <li><a href="policy.html">Policy</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="feedback2.html">Feedback</a></li>
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <main>
-    <div class = "content">
-        <h1>CLIMATE ACTION</h1>
-        <br>
-        <h2>Introduction to Climate Action</h2>
-        <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change. As one of the most pressing global issues of our time, climate change is driven primarily by the increase in greenhouse gas emissions, deforestation, and unsustainable consumption of resources. These activities result in rising global temperatures, melting polar ice caps, sea-level rise, extreme weather events, and biodiversity loss.</p>
-        <p>To mitigate these impacts and build a sustainable future, climate action focuses on strategies to reduce carbon emissions, adapt to climate risks, and transition to renewable and sustainable energy sources. It encompasses a broad range of initiatives, from international agreements like the Paris Agreement to grassroots movements advocating for local and community-based solutions.</p>
-        <a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>
-    </div>
+        <div class="content">
+            <h1>CLIMATE ACTION</h1>
+            <h2>Introduction to Climate Action</h2>
+            <p>Climate action refers to the collective and individual efforts to address the challenges posed by climate change...</p>
+            <a href="https://www.un.org/en/climatechange" target="_blank" class="climate-button">Take Climate Action Now</a>
+        </div>
     </main>
 
     <footer>
-        &copy; 2024 Climate-Action. All rights reserved.
+        &copy; 2024 Climate. All rights reserved.
     </footer>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn">↑ Back to Top</button>
 
-  
-<script>
-    let prevScrollPos = window.pageYOffset;
-    const navbar = document.querySelector("ul");
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
 
-    window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("ul");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-        // Hide or show navbar
-        if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = "0"; // Show navbar
-        } else {
-            navbar.style.top = "-100px"; // Hide navbar
-        }
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
 
-        prevScrollPos = currentScrollPos;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0";
+            } else {
+                navbar.style.top = "-100px";
+            }
 
-        // Show "Scroll to Top" button when scrolling down 100px
-        if (currentScrollPos > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
+            prevScrollPos = currentScrollPos;
 
-    // Smooth scroll to the top
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            if (currentScrollPos > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-    // Toggle Mobile Menu
+
+        // Toggle Mobile Menu
         function toggleMenu() {
             const menu = document.getElementById("menu");
             menu.classList.toggle("show");
         }
-</script>    
-
+    </script>
 </body>
-</head>
 </html>
