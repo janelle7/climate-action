@@ -12,60 +12,6 @@
             font-family: Arial, sans-serif;
             padding-top: 50px; /* Adjust this to account for navbar height */
         }
-  /* Hamburger Menu */
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            justify-content: space-between;
-            width: 30px;
-            height: 20px;
-        }
-
-        .hamburger div {
-            background-color: white;
-            height: 4px;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        /* Mobile Menu */
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-
-        ul li {
-            margin: 10px 0;
-        }
-
-        ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 15px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 5px;
-            width: 100%;
-            text-align: center;
-        }
-
-        ul li a:hover {
-            background-color: #444;
-        }
-
-        /* Media Query for mobile devices */
-        @media screen and (max-width: 768px) {
-            /* Show hamburger icon on mobile */
-            .hamburger {
-                display: flex;
-            }
-        }
 
         ul {
             list-style-type: none;
@@ -122,6 +68,18 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
+
+        @media (max-width: 768px) {
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                margin: 10px 0;
+            }
+        }
+
         h1 {  
            color: lightblue;  
            font-size: 87px;  
@@ -220,7 +178,6 @@
     </style>
 <body>
     <!-- Navigation Bar -->
-    <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="mitigation.html">Mitigation</a></li>
@@ -229,23 +186,7 @@
         <li><a href="education.html">Education</a></li>
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
- <!-- Hamburger Menu Icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
 
-        <!-- Mobile Menu List -->
-        <ul id="mobileMenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Mitigation</a></li>
-            <li><a href="#">Adaptation</a></li>
-            <li><a href="#">Policy</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </nav>
     <main>
     <div class = "content">
         <h1>CLIMATE ACTION</h1>
@@ -297,13 +238,6 @@
         });
     });
 </script>    
-    <script>
-        // Function to toggle the mobile menu
-        function toggleMenu() {
-            const menu = document.getElementById("mobileMenu");
-            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-        }
-    </script>
 
 </body>
 </head>
