@@ -6,6 +6,8 @@
     <title>Feedback Form</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+
+    <title>Feedback</title>
     <style>
         body {
             background: url('nature4.jpg');
@@ -14,10 +16,8 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Adjust this to account for navbar height */
         }
 
-        /* Navigation Bar */
         ul {
             list-style-type: none;
             margin: 0;
@@ -50,28 +50,6 @@
         li a:hover {
             background-color: grey;
             border-radius: 5px;
-        }
-
-        /* Content Styling */
-        .content {
-            margin-top: 100px;
-            max-width: 1200px;
-            margin: 100px auto 20px;
-            padding: 20px;
-            color: black;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Feedback Form Styling */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         form h1 {
@@ -126,8 +104,31 @@
             background-color: rgb(15, 74, 191);
         }
 
-                /* Responsive Design */
-                @media (max-width: 768px) {
+        /* Content Section */
+        .content {
+            margin-top: 50px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Animation for Title */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             ul {
                 flex-direction: column;
                 align-items: center;
@@ -150,6 +151,25 @@
                 font-size: 16px;
             }
         }
+                              /* Back to Top Button */
+                              #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
 
         body {
             margin: 0;
@@ -161,10 +181,26 @@
             flex: 1;
         }
         footer {
-            color: white;
             text-align: center;
             padding: 10px;
             font-size: 0.9em;
+        }
+                 /* Climate Reality Project Button */
+                 .climate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            font-family: 'ALGERIAN', sans-serif;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .climate-button:hover {
+            background-color: blue;
         }
 
     </style>
@@ -180,25 +216,62 @@
         <li><a href="feedback2.html">Feedback</a></li>
     </ul>
 
-    <!-- Feedback Form -->
-    <div class="container">
-        <form>
-            <h1>Feedback</h1>
-            <div class="id">
-                <input type="text" placeholder="Full Name" required>
-                <i class="far fa-user"></i>
-            </div>
-            <div class="id">
-                <input type="email" placeholder="Email Address" required>
-                <i class="far fa-envelope"></i>
-            </div>
-            <textarea placeholder="Enter your opinion here..." required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <footer>
-        &copy; 2024 Climate. All rights reserved.
-    </footer>
-\
+    <!-- Main Content -->
+        <div class = "content">
+            <form>
+                <h1>Feedback</h1>
+                <div class="id">
+                    <input type="text" placeholder="Full Name" required>
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="id">
+                    <input type="email" placeholder="Email Address" required>
+                    <i class="far fa-envelope"></i>
+                </div>
+                <textarea placeholder="Enter your opinion here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>    
+        </div>
+    
+        <footer>
+            &copy; 2024 Climate. All rights reserved.
+        </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">↑ Back to Top</button>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.querySelector("ul");
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        window.onscroll = function () {
+            const currentScrollPos = window.pageYOffset;
+    
+            // Hide or show navbar
+            if (prevScrollPos > currentScrollPos) {
+                navbar.style.top = "0"; // Show navbar
+            } else {
+                navbar.style.top = "-100px"; // Hide navbar
+            }
+    
+            prevScrollPos = currentScrollPos;
+    
+            // Show "Scroll to Top" button when scrolling down 100px
+            if (currentScrollPos > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Smooth scroll to the top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>    
+    
 </body>
 </html>
