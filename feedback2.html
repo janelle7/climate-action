@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
-
-    <title>Feedback</title>
+    <title>Education</title>
     <style>
         body {
             background: url('nature4.jpg');
@@ -50,6 +44,58 @@
         li a:hover {
             background-color: grey;
             border-radius: 5px;
+        }
+
+        /* Title Styling */
+        h1 {
+            color: lightblue;
+            font-size: 87px;
+            text-align: center;
+            font-family: "Cooper Black", serif;
+            margin-top: 100px; /* Spacing to avoid overlap with the navbar */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        /* Section Title Styling */
+        h2 {
+            color: red;
+            font-size: 56px;
+            text-align: left;
+            font-family: "Cooper Black", serif;
+            margin-top: 40px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            color: white;
+            font-size: 20px;
+            text-align: left;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 50px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+                /* Feedback Form Styling */
+                .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         form h1 {
@@ -102,17 +148,6 @@
         /* Button Hover */
         button:hover {
             background-color: rgb(15, 74, 191);
-        }
-
-        /* Content Section */
-        .content {
-            margin-top: 50px;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            color: black;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
         }
 
         /* Animation for Title */
@@ -199,10 +234,6 @@
             margin-top: 20px;
         }
 
-        .climate-button:hover {
-            background-color: blue;
-        }
-
     </style>
 </head>
 <body>
@@ -217,6 +248,7 @@
     </ul>
 
     <!-- Main Content -->
+    <main>
         <div class = "content">
             <form>
                 <h1>Feedback</h1>
@@ -232,6 +264,7 @@
                 <button type="submit">Submit</button>
             </form>    
         </div>
+        </main>
     
         <footer>
             &copy; 2024 Climate. All rights reserved.
